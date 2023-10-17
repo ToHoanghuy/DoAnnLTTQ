@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             SuspendLayout();
             // 
             // Form1
@@ -35,9 +36,10 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(640, 360);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2, 2, 2, 2);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Puzzle Game";
             ResumeLayout(false);
         }
 
