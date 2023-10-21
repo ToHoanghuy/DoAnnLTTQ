@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 using System.Drawing.Imaging;
+using System.Runtime.Versioning;
 
 namespace PuzzleGame
 {
     public partial class Form1 : Form
     {
         Point EmptyPoint;
-        ArrayList images = new ArrayList(); 
+        ArrayList images = new ArrayList();
         public Form1()
         {
             EmptyPoint.X = 180;
@@ -37,7 +38,7 @@ namespace PuzzleGame
         {
             foreach (Button b in panel1.Controls)
                 b.Enabled = true;
-            Image original = Image.FromFile(@"C:\Users\Admin\Pictures\camiphone\IMG_E0565.JPG");
+            Image original = Properties.Resources.IMG_E0565;
 
             cropImageTomages(original, 270, 270);
 
@@ -51,10 +52,10 @@ namespace PuzzleGame
             int i = 0;
             int[] arr = { 0, 1, 2, 3, 4, 5, 6, 7 };
             arr = suffle(arr);
-               
+
             foreach (Button b in panel1.Controls)
             {
-                if(i<arr.Length)
+                if (i < arr.Length)
                 {
                     b.Image = (Image)images[arr[i]];
                     i++;
@@ -65,7 +66,7 @@ namespace PuzzleGame
         private int[] suffle(int[] arr)
         {
             Random rand = new Random();
-            arr =arr.OrderBy(x => rand.Next()).ToArray();
+            arr = arr.OrderBy(x => rand.Next()).ToArray();
             return arr;
         }
 
@@ -73,7 +74,7 @@ namespace PuzzleGame
         {
             Bitmap bmp = new Bitmap(v1, v2);
             Graphics graphic = Graphics.FromImage(bmp);
-            graphic.DrawImage(original, 0, 0,v1,v2);
+            graphic.DrawImage(original, 0, 0, v1, v2);
             graphic.Dispose();
 
             int movr = 0, movd = 0;
@@ -81,18 +82,18 @@ namespace PuzzleGame
             {
                 Bitmap piece = new Bitmap(90, 90);
 
-                for (int i = 0; i < 90; i++) 
-                    for (int j=0;j<90;j++)
-                        piece.SetPixel(i,j,bmp.GetPixel(i+movr,j+movd));
+                for (int i = 0; i < 90; i++)
+                    for (int j = 0; j < 90; j++)
+                        piece.SetPixel(i, j, bmp.GetPixel(i + movr, j + movd));
                 images.Add(piece);
 
                 movr += 90;
-                if(movr== 270)
+                if (movr == 270)
                 {
                     movr = 0;
-                    movd += 90; 
+                    movd += 90;
                 }
-            } 
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,12 +102,12 @@ namespace PuzzleGame
         }
         private void MoveButton(Button btn)
         {
-            if(((btn.Location.X==EmptyPoint.X-90||btn.Location.X==EmptyPoint.X+90)&&btn.Location.Y==EmptyPoint.Y)||
+            if (((btn.Location.X == EmptyPoint.X - 90 || btn.Location.X == EmptyPoint.X + 90) && btn.Location.Y == EmptyPoint.Y) ||
               ((btn.Location.Y == EmptyPoint.Y - 90 || btn.Location.Y == EmptyPoint.Y + 90) && btn.Location.X == EmptyPoint.X))
             {
                 Point swap = btn.Location;
                 btn.Location = EmptyPoint;
-                EmptyPoint= swap;
+                EmptyPoint = swap;
             }
 
             if (EmptyPoint.X == 180 && EmptyPoint.Y == 180)

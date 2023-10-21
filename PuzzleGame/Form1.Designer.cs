@@ -36,153 +36,149 @@ namespace PuzzleGame
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            button8 = new Button();
+            button7 = new Button();
+            button6 = new Button();
+            button5 = new Button();
+            button4 = new Button();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            StartGame = new Button();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(270, 270);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            panel1.Controls.Add(button8);
+            panel1.Controls.Add(button7);
+            panel1.Controls.Add(button6);
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button1);
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(216, 216);
+            panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(90, 180);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(90, 90);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button1_Click);
+            button8.Location = new Point(72, 144);
+            button8.Margin = new Padding(2);
+            button8.Name = "button8";
+            button8.Size = new Size(72, 72);
+            button8.TabIndex = 7;
+            button8.Text = "button8";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button1_Click;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(0, 180);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(90, 90);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button1_Click);
+            button7.Location = new Point(0, 144);
+            button7.Margin = new Padding(2);
+            button7.Name = "button7";
+            button7.Size = new Size(72, 72);
+            button7.TabIndex = 6;
+            button7.Text = "button7";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button1_Click;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(180, 90);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(90, 90);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button1_Click);
+            button6.Location = new Point(144, 72);
+            button6.Margin = new Padding(2);
+            button6.Name = "button6";
+            button6.Size = new Size(72, 72);
+            button6.TabIndex = 5;
+            button6.Text = "button6";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button1_Click;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(90, 90);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(90, 90);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button1_Click);
+            button5.Location = new Point(72, 72);
+            button5.Margin = new Padding(2);
+            button5.Name = "button5";
+            button5.Size = new Size(72, 72);
+            button5.TabIndex = 4;
+            button5.Text = "button5";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button1_Click;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(0, 90);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(90, 90);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button1_Click);
+            button4.Location = new Point(0, 72);
+            button4.Margin = new Padding(2);
+            button4.Name = "button4";
+            button4.Size = new Size(72, 72);
+            button4.TabIndex = 3;
+            button4.Text = "button4";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button1_Click;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(180, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 90);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button1_Click);
+            button3.Location = new Point(144, 0);
+            button3.Margin = new Padding(2);
+            button3.Name = "button3";
+            button3.Size = new Size(72, 72);
+            button3.TabIndex = 2;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(90, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 90);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            button2.Location = new Point(72, 0);
+            button2.Margin = new Padding(2);
+            button2.Name = "button2";
+            button2.Size = new Size(72, 72);
+            button2.TabIndex = 1;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button1_Click;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 90);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(0, 0);
+            button1.Margin = new Padding(2);
+            button1.Name = "button1";
+            button1.Size = new Size(72, 72);
+            button1.TabIndex = 0;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // button10
+            // StartGame
             // 
-            this.button10.Location = new System.Drawing.Point(65, 319);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(131, 34);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "start game";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(533, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            StartGame.Location = new Point(52, 255);
+            StartGame.Margin = new Padding(2);
+            StartGame.Name = "StartGame";
+            StartGame.Size = new Size(105, 27);
+            StartGame.TabIndex = 4;
+            StartGame.Text = "start game";
+            StartGame.UseVisualStyleBackColor = true;
+            StartGame.Click += button10_Click;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(978, 566);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
-            this.Text = "Puzzle Game";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(782, 453);
+            Controls.Add(StartGame);
+            Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(2);
+            Name = "Form1";
+            Text = "Puzzle Game";
+            Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
@@ -196,8 +192,7 @@ namespace PuzzleGame
         private Button button3;
         private Button button2;
         private Button button1;
-        private Button button10;
+        private Button StartGame;
         private Button button9;
-        private PictureBox pictureBox1;
     }
 }
